@@ -1,10 +1,13 @@
 // Your code here.
 
 function loop(start, until, step, action){
-    for(i=start; until; step){
-        return i;
+    if (until === false){
+        return;
     }
-    action(i);
+
+    action(start);
+
+    
 }
 
 loop(3, n => n > 0, n => n - 1, console.log);
